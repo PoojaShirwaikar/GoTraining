@@ -63,7 +63,7 @@ func getbonus(name string) (amount int, status bool) {
 }
 
 //pattern 6
-//variadic parameter function
+//variadic parameter function  -- can accept 0 or more values
 //can pass 0 or more parameters of type integer
 //variadic parameter should be always at end
 func variadicFunc(name string, address string, values ...int) {
@@ -76,6 +76,6 @@ func variadicFunc(name string, address string, values ...int) {
 
 func variadicExample(i ...interface{}) {
 	for _, v := range i {
-		fmt.Println(reflect.ValueOf(v).Kind())
+		fmt.Println(reflect.ValueOf(v).Kind()) //getting data type using reflect
 	}
 }
